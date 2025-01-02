@@ -11,7 +11,7 @@ export default function Home() {
           <Link href="/profile">프로필</Link>
         </div>
       </header>
-      <div className="post-list">Post List</div>
+      <div className="post__list">Post List</div>
       <footer>
         <div>Menu 1</div>
         <div>Menu 2</div>

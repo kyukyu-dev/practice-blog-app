@@ -9,6 +9,12 @@ body {
   margin: 0;
 }
 
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;

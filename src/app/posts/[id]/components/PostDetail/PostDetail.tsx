@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export function PostDetail() {
   return (
     <>
@@ -15,7 +17,9 @@ export function PostDetail() {
 
           <div className="post__utils-box">
             <button className="post__delete">삭제</button>
-            <button className="post__edit">수정</button>
+            <Link href="/posts/edit/1" className="post__edit">
+              수정
+            </Link>
           </div>
 
           <p className="post__text">

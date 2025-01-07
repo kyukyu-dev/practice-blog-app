@@ -1,16 +1,35 @@
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
 
 interface PostListProps {
   hideNavigation?: boolean
 }
 
 export function PostList({ hideNavigation }: PostListProps) {
+  const [activeTab, setActiveTab] = useState<'all' | 'my'>('all')
+
   return (
     <>
       {!hideNavigation && (
         <div className="post__navigation">
-          <div className="post__navigation--active">전체</div>
-          <div>나의 글</div>
+          <div
+            className={
+              activeTab === 'all' ? 'post__navigation--active' : undefined
+            }
+            onClick={() => setActiveTab('all')}
+          >
+            전체
+          </div>
+          <div
+            className={
+              activeTab === 'my' ? 'post__navigation--active' : undefined
+            }
+            onClick={() => setActiveTab('my')}
+          >
+            나의 글
+          </div>
         </div>
       )}
       <div className="post__list">
